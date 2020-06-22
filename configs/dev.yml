@@ -1,0 +1,7 @@
+debug: true
+server:
+  host: localhost
+  port: 8080
+db:
+  postgres:
+    dsn: host=localhost port=5433 user=postgres dbname=postgres password=12345 sslmode=disable

@@ -1,3 +1,6 @@
+# OS X hidden files
+.DS_Store
+
 # VSCode
 .vscode
 .idea
