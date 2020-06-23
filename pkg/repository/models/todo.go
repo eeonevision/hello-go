@@ -2,7 +2,7 @@ package models
 
 import "github.com/jinzhu/gorm"
 
-// Todo struct contains info about todo.
+// Todo struct keeps info about todo.
 type Todo struct {
 	gorm.Model
 	Title      string

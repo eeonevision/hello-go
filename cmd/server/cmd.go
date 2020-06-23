@@ -8,10 +8,17 @@ import (
 	"github.com/eeonevision/hello-go/pkg/server"
 )
 
-const fileNameEnv = "HELLO_GO_FILE_NAME"
+const (
+	configNameEnv     = "HELLO_GO_FILE_NAME"
+	defaultConfigName = "dev.yml"
+)
 
 func main() {
-	fileName := os.Getenv(fileNameEnv)
+	fileName := os.Getenv(configNameEnv)
+
+	if fileName == "" {
+		fileName = defaultConfigName
+	}
 
 	cfg, err := config.Parse(fileName)
 	if err != nil {

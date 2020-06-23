@@ -5,6 +5,7 @@ import (
 	"github.com/eeonevision/hello-go/pkg/server/handlers/models"
 )
 
+// ToGetAllTodos converts repository's model to handler.
 func ToGetAllTodos(in []*repositoryModels.Todo) []*models.Todo {
 	todos := make([]*models.Todo, len(in))
 

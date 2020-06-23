@@ -15,10 +15,12 @@ type handler struct {
 	repository repository.API
 }
 
+// New initializes new instance of handler.
 func New(repository repository.API) *handler {
 	return &handler{repository: repository}
 }
 
+// PostTodoHandler handles new todo in db.
 func (h *handler) PostTodoHandler() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		body, err := ioutil.ReadAll(c.Request.Body)
@@ -43,6 +45,7 @@ func (h *handler) PostTodoHandler() gin.HandlerFunc {
 	}
 }
 
+// GetAllTodosHandler obtains all todos from repostiry.
 func (h *handler) GetAllTodosHandler() gin.HandlerFunc {
 	return func(c *gin.Context) {
 

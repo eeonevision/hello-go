@@ -10,6 +10,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// Run starts new server.
 func Run(cfg *config.Config, repository repository.API) {
 	if !cfg.Debug {
 		gin.SetMode(gin.ReleaseMode)
